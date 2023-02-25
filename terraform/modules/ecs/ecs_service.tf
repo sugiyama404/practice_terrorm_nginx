@@ -10,7 +10,7 @@ resource "aws_ecs_service" "newworld-service" {
   network_configuration {
     security_groups  = [var.vpc_id]
     subnets          = ["${var.subnet_id}"]
-    assign_public_ip = false
+    assign_public_ip = true
   }
 
   lifecycle {
