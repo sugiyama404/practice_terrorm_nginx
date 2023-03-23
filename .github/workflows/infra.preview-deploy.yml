@@ -23,7 +23,7 @@ env:
   ECR_REPOSITORY: newworld
   ECS_SERVICE: nginx-service
   ECS_CLUSTER: newworld-cluster
-  ECS_TASK_DEFINITION: terraform/modules/ecs/container_definitions.json
+  ECS_TASK_DEFINITION: .github/workflows/newworld-definition-revision36.json
   CONTAINER_NAME: newworld
 jobs:
   deploy:
