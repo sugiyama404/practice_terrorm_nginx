@@ -8,7 +8,7 @@ resource "null_resource" "default" {
   }
 
   provisioner "local-exec" {
-    command = "docker build -t ${var.image_name} --file ../Dockerfile ../"
+    command = "docker build -t ${var.image_name} --file ../Dockerfile ../nginx/"
   }
 
   provisioner "local-exec" {
