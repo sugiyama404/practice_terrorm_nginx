@@ -1,5 +1,3 @@
-variable "image_name" {}
-
 resource "aws_ecr_repository" "repository" {
   name                 = var.image_name
   image_tag_mutability = "IMMUTABLE"
@@ -7,5 +5,9 @@ resource "aws_ecr_repository" "repository" {
 
   image_scanning_configuration {
     scan_on_push = true
+  }
+
+  tags = {
+    Name = "${var.app_name}-repository"
   }
 }

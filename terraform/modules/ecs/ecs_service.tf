@@ -1,6 +1,3 @@
-variable "vpc_id" {}
-variable "subnet_id" {}
-
 resource "aws_ecs_service" "newworld-service" {
   name            = "nginx-service"
   cluster         = aws_ecs_cluster.newworld-cluster.id

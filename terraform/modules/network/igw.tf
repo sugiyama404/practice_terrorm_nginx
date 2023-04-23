@@ -1,5 +1,5 @@
-resource "aws_internet_gateway" "newworld-igw" {
-  vpc_id  = aws_vpc.newworld.id
+resource "aws_internet_gateway" "main-igw" {
+  vpc_id = aws_vpc.main.id
 
   tags = {
     Name = "${var.app_name}-igw"

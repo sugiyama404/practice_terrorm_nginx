@@ -5,7 +5,7 @@ resource "aws_iam_role" "newworld_role" {
     Version = "2012-10-17"
     Statement = [
       {
-        Sid: ""
+        Sid : ""
         Action = "sts:AssumeRole"
         Effect = "Allow"
         Principal = {
@@ -14,4 +14,8 @@ resource "aws_iam_role" "newworld_role" {
       },
     ]
   })
+
+  tags = {
+    Name = "${var.app_name}--app-iam-role"
+  }
 }

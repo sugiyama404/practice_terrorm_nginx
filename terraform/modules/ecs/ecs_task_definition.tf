@@ -1,5 +1,3 @@
-variable "aws_iam_role" {}
-
 resource "aws_ecs_task_definition" "newworld-definition" {
   family                   = "${var.app_name}-definition"
   requires_compatibilities = ["FARGATE"]
